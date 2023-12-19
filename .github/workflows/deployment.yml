@@ -15,6 +15,7 @@ jobs:
       - name: Run tests
         run: npm test
   deploy:
+    needs: test #esto hace que corra cuando termina la prueba, si no correran en paralelo.
     runs-on: ubuntu-latest
     steps:
       - name: Get code
